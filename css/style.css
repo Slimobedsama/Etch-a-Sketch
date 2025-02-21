@@ -1,4 +1,4 @@
-body, #btn {
+body, .btn {
     background-color: #000;
 }
 .text {
@@ -7,7 +7,7 @@ body, #btn {
     align-items: center;
     margin-bottom: 20px;
 }
-label, #btn {
+label, .btn {
     font-size: 1.1em;
     font-weight: 600;
     color: #fff;
@@ -15,11 +15,12 @@ label, #btn {
 #choice {
     width: 60px;
 }
-#btn {
+.btn {
     cursor: pointer;
     border: 2px solid #fff;
     border-radius: 5px;
     padding: 3px 10px;
+    margin: 0 10px;
 }
 #main-container {
     height: 100vh;
@@ -27,8 +28,7 @@ label, #btn {
     justify-content: center;
 }
 #grid-container {
-    width: 80%;
-    min-height: 400px;
+    max-height: 500px;
     display: flex;
     flex-wrap: wrap;
 }

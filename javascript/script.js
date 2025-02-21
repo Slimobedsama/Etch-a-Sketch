@@ -1,7 +1,7 @@
 // DOM SELECTORS
 const numberOfGrid = document.getElementById('choice');
 const label = document.querySelector('label');
-const gridButton = document.getElementById('btn');
+const gridButton = document.getElementById('btn-1');
 const mainContainer = document.getElementById('main-container');
 const gridContainer = document.createElement('div');
 
