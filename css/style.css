@@ -1,6 +1,12 @@
 body, .btn {
     background-color: #000;
 }
+h1 {
+    text-align: center;
+}
+h1, label, .btn {
+    color: #fff;
+}
 .text {
     display: flex;
     flex-direction: column;
@@ -10,7 +16,6 @@ body, .btn {
 label, .btn {
     font-size: 1.1em;
     font-weight: 600;
-    color: #fff;
 }
 #choice {
     width: 60px;
