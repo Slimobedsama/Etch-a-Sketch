@@ -29,11 +29,10 @@ label, #btn {
 #grid-container {
     width: 80%;
     min-height: 400px;
-    border: 1px solid #777;
     display: flex;
     flex-wrap: wrap;
 }
 .cell {
     box-sizing: border-box;
-    border: 1px solid #777;
+    border: 1px solid #fff;
 }

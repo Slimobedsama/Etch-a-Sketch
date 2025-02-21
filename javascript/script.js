@@ -1,4 +1,7 @@
 // DOM SELECTORS
+const numberOfGrid = document.getElementById('choice');
+const label = document.querySelector('label');
+const gridButton = document.getElementById('btn');
 const mainContainer = document.getElementById('main-container');
 const gridContainer = document.createElement('div');
 
@@ -7,7 +10,19 @@ gridContainer.setAttribute('id', 'grid-container');
 mainContainer.appendChild(gridContainer);
 
 function createGrid(userInput) {
-    const gridSize = parseInt(userInput);
+    gridContainer.innerHTML = '';
+    userInput = parseInt(numberOfGrid.value);
+    
+    if(userInput < 1 || userInput > 100) {
+        alert('Choose a number between 1 - 100');
+        return;
+    }
+
+    if(userInput < 50) {
+        gridContainer.style.width = '50%';
+    }
+
+    const gridSize = userInput;
     for(i = 0; i < (gridSize * gridSize); i++) {
         let cells = document.createElement('div');
         cells.setAttribute('class', 'cell');
@@ -23,7 +38,6 @@ function createGrid(userInput) {
         });
     }
 }
-createGrid(24)
 
 function randomColor() {
     let letters = '0123456789ABCDEF';
@@ -34,3 +48,5 @@ function randomColor() {
     }
     return color;
 }
+
+gridButton.addEventListener('click', createGrid);
