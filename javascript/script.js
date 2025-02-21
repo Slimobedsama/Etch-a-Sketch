@@ -2,6 +2,7 @@
 const numberOfGrid = document.getElementById('choice');
 const label = document.querySelector('label');
 const gridButton = document.getElementById('btn-1');
+const clearGrid = document.getElementById('btn-2');
 const mainContainer = document.getElementById('main-container');
 const gridContainer = document.createElement('div');
 
@@ -18,8 +19,10 @@ function createGrid(userInput) {
         return;
     }
 
-    if(userInput < 50) {
+    if(userInput <= 50) {
         gridContainer.style.width = '50%';
+    } else {
+        gridContainer.style.width = '80%';
     }
 
     const gridSize = userInput;
@@ -33,8 +36,9 @@ function createGrid(userInput) {
             cells.style.backgroundColor = randomColor();
         });
 
-        cells.addEventListener('mouseout', ()=> {
+        clearGrid.addEventListener('click', ()=> {
             cells.style.backgroundColor = '';
+            numberOfGrid.value = '';
         });
     }
 }

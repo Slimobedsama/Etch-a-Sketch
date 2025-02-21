@@ -28,7 +28,7 @@ label, .btn {
     justify-content: center;
 }
 #grid-container {
-    max-height: 500px;
+    max-height: 400px;
     display: flex;
     flex-wrap: wrap;
 }
